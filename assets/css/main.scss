@@ -1,0 +1,58 @@
+@import 'breakpoints';
+@import 'variables';
+@import 'utils';
+@import 'reset';
+
+:root {
+	font-size: 1rem;
+
+	@media (min-width: $breakpoint-tablet) {
+	font-size: 1.25rem;
+	}
+}
+
+.screen-reader-text {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}
+
+body {
+	font-family: Montserrat, sans-serif;
+	font-weight: 400;
+}
+
+@supports (font-variation-settings: normal) {
+	body {
+		font-family: MontserratVariable;
+		font-variation-settings: 'wght' 400;
+	}
+}
+
+.page-inner{
+	display: grid;
+	grid-template-rows: max-content 1fr max-content;
+	min-block-size: 100vh;
+	padding: 1rem;
+}
+
+.page-main {
+	margin-inline: auto;
+	max-inline-size: $breakpoint-desktop;
+}
+
+.app-page-heading {
+	font-size: 3.5rem;
+	font-variation-settings: 'wght' 400;
+
+	@media (min-width: $breakpoint-mobile-large){
+		font-size: 4rem;
+		font-variation-settings: 'wght' 300;
+	}
+}

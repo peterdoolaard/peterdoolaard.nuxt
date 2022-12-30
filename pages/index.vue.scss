@@ -1,0 +1,81 @@
+@import '~/assets/css/breakpoints.scss';
+
+:any-link {
+	color: inherit;
+	text-decoration-color: inherit;
+	text-underline-offset: 0.25em;
+	transition: text-decoration-color 250ms ease-in-out;
+}
+
+a {
+
+	&:hover {
+		text-decoration-color: var(--color-link-accent);
+	}
+}
+
+.mask-circle {
+	clip-path: circle(50%);
+	display: inline-block;
+	float: right;
+	object-position: center 20%;
+	block-size: 10rem;
+	inline-size: 10rem;
+
+	@media (min-width: $breakpoint-desktop) {
+		block-size: 16rem;
+		inline-size: 16rem;
+	}
+
+	img {
+		aspect-ratio: 1/1;
+		block-size: 100%;
+		object-fit: cover;
+		object-position: center 10%;
+	}
+}
+
+button {
+	align-items: center;
+	appearance: none;
+	background: transparent;
+	border: none;
+	color: gold;
+	cursor: pointer;
+	display: inline-flex;
+	padding: 0;
+
+	& svg {
+		block-size: 1em;
+		inline-size: auto;
+	}
+}
+
+.pointing::before {
+	content: '👆🏻';
+	cursor: pointer;
+}
+
+.pointing:hover::before {
+	animation: rotate-hand 500ms linear
+}
+
+@keyframes rotate-hand {
+	0% {
+		content: '👆🏻'
+	}
+	25% {
+		content: '👈🏻'
+	}
+	50% {
+		content: '👇🏻'
+	}
+	75% {
+		content: '👉🏻'
+	}
+	100% {
+		content: '👆🏻'
+	}
+}
+
+

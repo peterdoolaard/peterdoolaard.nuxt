@@ -1,0 +1,29 @@
+.site-header {
+	padding-block-end: 4rem;
+}
+
+.site-branding {
+	color: var(--color-dark);
+	font-size: 1.5rem;
+	font-variation-settings: 'wght' 100;
+
+	:hover {
+
+		@media (hover: hover) {
+			color: var(--color-link-accent);
+		}
+	}
+
+	a {
+		color: inherit;
+		padding: 0.25rem 0;
+		text-decoration: none;
+
+		:active::before {
+			background: red;
+			content: '';
+			inline-size: 100%;
+		}
+	}
+}
+
