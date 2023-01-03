@@ -1,5 +1,7 @@
 .site-header {
-	padding-block-end: 4rem;
+	background: var(--background-light);
+	margin: -1rem -1rem 0 -1rem;
+	padding: 1rem;
 }
 
 .site-branding {
@@ -10,20 +12,13 @@
 	:hover {
 
 		@media (hover: hover) {
-			color: var(--color-link-accent);
+			color: var(--color-accent);
 		}
 	}
 
 	a {
-		color: inherit;
 		padding: 0.25rem 0;
 		text-decoration: none;
-
-		:active::before {
-			background: red;
-			content: '';
-			inline-size: 100%;
-		}
 	}
 }
 

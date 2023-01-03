@@ -1,8 +1,3 @@
-@import 'breakpoints';
-@import 'variables';
-@import 'utils';
-@import 'reset';
-
 :root {
 	font-size: 1rem;
 
@@ -35,8 +30,14 @@ body {
 	}
 }
 
+.page-outer {
+	background: black;
+	color: white;
+}
+
 .page-inner{
 	display: grid;
+	gap: 4rem;
 	grid-template-rows: max-content 1fr max-content;
 	min-block-size: 100vh;
 	padding: 1rem;
@@ -50,9 +51,14 @@ body {
 .app-page-heading {
 	font-size: 3.5rem;
 	font-variation-settings: 'wght' 400;
+	margin-block-end: 2rem;
 
 	@media (min-width: $breakpoint-mobile-large){
 		font-size: 4rem;
 		font-variation-settings: 'wght' 300;
 	}
+}
+
+:any-link {
+	color: inherit;
 }

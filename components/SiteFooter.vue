@@ -1,7 +1,7 @@
 <template>
   <footer class="site-footer">
     <div class="footer-contact">
-      <p>Made with ❤️ 🩸 🥵 😥</p>
+      <p>Made with ❤️ &amp; 🥳 </p>
       <address>
         <IconsMail />
         <a href="mailto:hi@peterdoolaard.nl">Peter Doolaard</a>
@@ -13,7 +13,8 @@
       <p>KVK 55196071</p>
       <p>
         <IconsCake />
-        Celebrating {{ year }}</p>
+        Celebrating {{ year }}
+      </p>
     </div>
   </footer>
 </template>
@@ -58,9 +59,11 @@ address {
   font-style: normal;
   gap: 0.5em;
 }
-  svg {
-    block-size: 1em;
-    inline-size: auto;
-  }
+
+svg {
+  block-size: 1em;
+  inline-size: auto;
+}
+
 
 </style>

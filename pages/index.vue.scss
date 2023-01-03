@@ -1,20 +1,16 @@
-@import '~/assets/css/breakpoints.scss';
-
 :any-link {
-	color: inherit;
-	text-decoration-color: inherit;
-	text-underline-offset: 0.25em;
-	transition: text-decoration-color 250ms ease-in-out;
-}
-
-a {
+	background: transparent;
+	text-decoration-color: var(--color-accent);
+	text-underline-offset: 0.1em;
 
 	&:hover {
-		text-decoration-color: var(--color-link-accent);
+		animation: linear-hover 500ms linear forwards;
+		text-decoration-color: transparent;
 	}
 }
 
 .mask-circle {
+	background: var(--color-accent);
 	clip-path: circle(50%);
 	display: inline-block;
 	float: right;
@@ -51,31 +47,124 @@ button {
 	}
 }
 
-.pointing::before {
-	content: '👆🏻';
+.pointing {
 	cursor: pointer;
-}
+	display: inline-block;
 
-.pointing:hover::before {
-	animation: rotate-hand 500ms linear
+	&:hover {
+		animation: rotate-hand 750ms linear;
+	}
 }
 
 @keyframes rotate-hand {
 	0% {
-		content: '👆🏻'
+		transform: rotate(0);
 	}
-	25% {
-		content: '👈🏻'
+	10% {
+		transform: rotate(-90deg);
+	}
+	20% {
+		transform: rotate(-135deg);
+	}
+	30% {
+		transform: rotate(-180deg);
+	}
+	40% {
+		transform: rotate(-90deg);
 	}
 	50% {
-		content: '👇🏻'
+		transform: rotate(0);
 	}
-	75% {
-		content: '👉🏻'
+	60% {
+		transform: rotate(45deg);
+	}
+	70% {
+		transform: rotate(60deg);
+	}
+	80% {
+		transform: rotate(30deg);
+	}
+	90% {
+		transform: rotate(-20deg);
 	}
 	100% {
-		content: '👆🏻'
+		transform: rotate(0);
 	}
 }
 
+@keyframes linear-hover {
+	0% {
+		background: linear-gradient(to right,
+			var(--background-light), var(--background-light) 10%,
+			transparent 10%, transparent
+		);
+		color: white;
+	}
+	10% {
+		background: linear-gradient(to right,
+			//transparent, transparent 10%,
+			var(--background-light), var(--background-light) 20%,
+			transparent 20%, transparent
+		);
+	}
+	20% {
+		background: linear-gradient(to right,
+			//transparent, transparent 20%,
+			var(--background-light), var(--background-light) 30%,
+			transparent 30%, transparent
+		);
+	}
+	30% {
+		background: linear-gradient(to right,
+			//transparent, transparent 30%,
+			var(--background-light), var(--background-light) 40%,
+			transparent 40%, transparent
+		);
+	}
+	40% {
+		background: linear-gradient(to right,
+			//transparent, transparent 40%,
+			var(--background-light), var(--background-light) 50%,
+			transparent 50%, transparent
+		);
+	}
+	50% {
+		background: linear-gradient(to right,
+			//transparent, transparent 50%,
+			var(--background-light), var(--background-light) 60%,
+			transparent 60%, transparent
+		);
+	}
+	60% {
+		background: linear-gradient(to right,
+			//transparent, transparent 60%,
+			var(--background-light), var(--background-light) 70%,
+			transparent 70%, transparent
+		);
+	}
+	70% {
+		background: linear-gradient(to right,
+			//transparent, transparent 70%,
+			var(--background-light), var(--background-light) 80%,
+			transparent 80%, transparent
+		);
+	}
+	80% {
+		background: linear-gradient(to right,
+			//transparent, transparent 80%,
+			var(--background-light), var(--background-light) 90%,
+			transparent 90%, transparent
+		);
+	}
+	90% {
+		background: linear-gradient(to right,
+			//transparent, transparent 90%,
+			var(--background-light), var(--background-light) 100% //transparent 100%, transparent
+		);
+	}
+	100% {
+		background: var(--background-light);
+		color: black;
+	}
+}
 

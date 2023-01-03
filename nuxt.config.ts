@@ -8,18 +8,18 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: [`
+          additionalData: `
             @use "@/assets/css/_breakpoints.scss" as *;
             @use "@/assets/css/_reset.scss" as *;
             @use "@/assets/css/_utils.scss" as *;
             @use "@/assets/css/_variables.scss" as *;
-          `],
+          `,
         }
       }
     }
   },
   css: [
-    '@/assets/css/main.scss',
+    // '@/assets/css/main.scss',
   ],
   image: {
     presets: {
@@ -31,6 +31,5 @@ export default defineNuxtConfig({
       }
     }
   }
-
 
 })
