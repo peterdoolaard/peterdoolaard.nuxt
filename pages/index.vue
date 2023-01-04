@@ -2,7 +2,9 @@
   <main>
     <div class="mask-circle">
       <img src="/images/portret-vrijstaand.webp"
-          alt="Peter Doolaard, een man met bril en wit haar, korte grijze baard en blauwe trui"/>
+          alt="Peter Doolaard, een man met bril en wit haar, korte grijze baard en blauwe trui."
+          width="600" height="900"
+      />
     </div>
     <p class="fw-3 fs-7xl">Hi!</p>
     <p>Mijn naam is

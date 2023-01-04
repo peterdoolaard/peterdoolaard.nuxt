@@ -24,11 +24,12 @@ const year: number = new Date().getFullYear()
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/css/breakpoints.scss';
 
 .site-footer {
   font-size: smaller;
+  margin: 0 -1rem -1rem;
   padding-block: 2rem 1rem;
+  position: relative;
 
   > * + * {
     margin-block-start: 1em;

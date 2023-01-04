@@ -1,21 +1,28 @@
 <template>
-  <main>
-    <h2 class="app-page-heading">Hall of fame</h2>
+  <main class="page-main">
+    <video
+        class="video-background"
+        src="/video/fame.mp4"
+        autoplay
+        muted
+        loop
+    />
+<!--    <h2 class="app-page-heading">Hall of fame</h2>-->
     <div class="cards">
       <div class="card-of-fame">
         <img src="/images/hof-html.png"
             alt="Badge LinkedIn-vaardigheidsevaluatie met tekst: Evaluatie van HTML. U behoort tot de beste 15% van de 3,4 miljoen personen die deze evaluatie hebben gedaan." />
-        <div class="podium" />
+<!--        <div class="podium" />-->
       </div>
       <div class="card-of-fame">
         <img src="/images/hof-css.png"
             alt="Badge LinkedIn-vaardigheidsevaluatie met tekst: Evaluatie van CSS. U behoort tot de beste 5% van de 1,8 miljoen personen die deze evaluatie hebben gedaan." />
-        <div class="podium" />
+<!--        <div class="podium" />-->
       </div>
       <div class="card-of-fame">
         <img src="/images/hof-fe.png"
             alt="Badge LinkedIn-vaardigheidsevaluatie met tekst: Evaluatie van Front-endontwikkeling. U behoort tot de beste 5% van de 940,9 duizend personen die deze evaluatie hebben gedaan." />
-        <div class="podium" />
+<!--        <div class="podium" />-->
       </div>
 
     </div>
@@ -24,19 +31,33 @@
 
 <style lang="scss" scoped>
 
+.video-background {
+  position: fixed;
+  left: 0;
+  top: 77px;
+  inline-size: 100vw;
+  block-size: 100vh;
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+.app-page-heading {
+  position: relative;
+}
+
 .cards {
   align-items: flex-end;
   display: flex;
   flex-flow: wrap;
   gap: 2rem;
+  position: relative;
 }
 
 .card-of-fame {
-  inline-size: 240px;
+  flex: 1 1 8rem;
 
-  img {
-    box-shadow: 0 10px 10px -5px;
-    margin-block-end: 5px;
+  @media (min-width: $breakpoint-tablet-landscape) {
+    flex: 1 1 8rem;
   }
 
   .podium {
