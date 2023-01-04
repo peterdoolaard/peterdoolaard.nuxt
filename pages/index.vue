@@ -1,9 +1,9 @@
 <template>
   <main>
     <div class="mask-circle">
-      <img src="/images/portret-vrijstaand.webp"
+      <img src="/images/portret-400x600.webp"
           alt="Peter Doolaard, een man met bril en wit haar, korte grijze baard en blauwe trui."
-          width="600" height="900"
+          width="400" height="600"
       />
     </div>
     <p class="fw-3 fs-7xl">Hi!</p>

@@ -84,10 +84,10 @@ const emits = defineEmits([
 
 .app-dialog__modal {
   background: black;
-  border-block-start: 4px solid var(--color-accent-dark);
-  border-inline-start: 4px solid var(--color-accent-dark);
-  border-inline-end: 12px solid var(--color-accent-dark);
-  border-block-end: 12px solid var(--color-accent-dark);
+  border-block-start: 4px solid var(--color-accent);
+  border-inline-start: 4px solid var(--color-accent);
+  border-inline-end: 12px solid var(--color-accent);
+  border-block-end: 12px solid var(--color-accent);
   margin: 4rem 2rem 6rem;
   max-inline-size: 70ch;
   max-block-size: 80vh;
