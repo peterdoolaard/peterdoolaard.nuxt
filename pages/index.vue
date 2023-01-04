@@ -1,7 +1,7 @@
 <template>
   <main>
     <div class="mask-circle">
-      <NuxtImg src="/images/portret-vrijstaand.webp"
+      <img src="/images/portret-vrijstaand.webp"
           alt="Peter Doolaard, een man met bril en wit haar, korte grijze baard en blauwe trui"/>
     </div>
     <p class="fw-3 fs-7xl">Hi!</p>
