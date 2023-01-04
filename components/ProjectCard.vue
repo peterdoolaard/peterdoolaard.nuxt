@@ -9,8 +9,9 @@
       <p class="project-stack">{{ props.stack }}</p>
       <p v-if="props.url" class="project-url"><a :href="props.url">{{ props.url }}</a></p>
       <p v-else class="project-url">Geen publiek project</p>
-      <div class="project-content">
-        <p v-for="par in props.description">{{ par }}</p></div>
+      <p class="project-content">
+        <span v-for="par in props.description">{{ par }}</span>
+      </p>
     </div>
   </article>
   <AppDialog

@@ -60,7 +60,7 @@
 	-webkit-line-clamp: 10;
 	white-space: pre-wrap;
 
-	p + p {
+	* + * {
 		margin-block-start: 0.5rem;
 	}
 }
