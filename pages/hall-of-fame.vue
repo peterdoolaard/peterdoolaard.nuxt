@@ -3,15 +3,18 @@
     <h2 class="app-page-heading">Hall of fame</h2>
     <div class="cards">
       <div class="card-of-fame">
-        <NuxtImg src="/images/hof-html.png" />
+        <img src="/images/hof-html.png"
+            alt="Badge LinkedIn-vaardigheidsevaluatie met tekst: Evaluatie van HTML. U behoort tot de beste 15% van de 3,4 miljoen personen die deze evaluatie hebben gedaan." />
         <div class="podium" />
       </div>
       <div class="card-of-fame">
-        <NuxtImg src="/images/hof-css.png" />
+        <img src="/images/hof-css.png"
+            alt="Badge LinkedIn-vaardigheidsevaluatie met tekst: Evaluatie van CSS. U behoort tot de beste 5% van de 1,8 miljoen personen die deze evaluatie hebben gedaan." />
         <div class="podium" />
       </div>
       <div class="card-of-fame">
-        <NuxtImg src="/images/hof-fe.png" />
+        <img src="/images/hof-fe.png"
+            alt="Badge LinkedIn-vaardigheidsevaluatie met tekst: Evaluatie van Front-endontwikkeling. U behoort tot de beste 5% van de 940,9 duizend personen die deze evaluatie hebben gedaan." />
         <div class="podium" />
       </div>
 
