@@ -1,10 +1,12 @@
 <template>
   <div>
-    <p v-if="!projects">Waar zijn de projecten? Zonet waren ze hier nog!</p>
+    <p v-if="!projects">Waar zijn de projecten? Zonet waren ze hier nog! Dan maar terug naar <NuxtLink
+        to="/">Home</NuxtLink></p>
     <div v-if="projects" class="projects-container">
       <ProjectCard
           v-for="project of projects"
           :key="project.id"
+          :id="project.id"
           :title = "project.title"
           :stack = "project.stack"
           :url = "project.url"
