@@ -1,31 +1,9 @@
-<template>
-  <article class="project-card">
-    <div class="project-inner">
-      <h2 class="project-heading">
-        <NuxtLink to="/">{{ title }}</NuxtLink>
-      </h2>
-      <p class="project-stack">{{ stack }}</p>
-      <p v-if="url" class="project-url"><a :href="url">{{ url }}</a></p>
-      <p v-else class="project-url">Geen publiek project</p>
-      <div class="project-content">
-        <p v-for="par in description">{{ par }}</p></div>
-      </div>
-  </article>
-</template>
-
-<script setup lang="ts">
-defineProps(['title', 'stack', 'url', 'description'])
-
-</script>
-
-<style lang="scss" scoped>
 .project-card {
   border-block-start: 4px solid var(--color-accent-dark);
   border-inline-start: 4px solid var(--color-accent-dark);
   border-inline-end: 12px solid var(--color-accent-dark);
   border-block-end: 12px solid var(--color-accent-dark);
-  //inline-size: 18rem;
-  flex: 1 0 18rem;
+  inline-size: 18rem;
 }
 
 .project-inner {
@@ -86,4 +64,3 @@ defineProps(['title', 'stack', 'url', 'description'])
     margin-block-start: 0.5rem;
   }
 }
-</style>
