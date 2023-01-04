@@ -1,11 +1,11 @@
 <template>
   <article class="project-card">
     <div class="project-inner">
-        <h2 class="project-heading">
-      <button class="button __link" type="button" @click="openModal = true">
+      <h2 class="project-heading">
+        <button class="button __link" type="button" @click="openModal = true">
           {{ props.title }}
-      </button>
-        </h2>
+        </button>
+      </h2>
       <p class="project-stack">{{ props.stack }}</p>
       <p v-if="props.url" class="project-url"><a :href="props.url">{{ props.url }}</a></p>
       <p v-else class="project-url">Geen publiek project</p>
