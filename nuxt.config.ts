@@ -21,6 +21,20 @@ export default defineNuxtConfig({
   css: [
     // '@/assets/css/main.scss',
   ],
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'nl'
+      },
+      title: 'Freelance front-end developer | Peter Doolaard',
+      meta: [
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { charset: 'utf-8' },
+        { name: 'description', content: 'Front-end developer sterk in HTML, CSS, responsive, SEO, accessibility en' +
+            ' JavaScript'},
+      ]
+    }
+  },
   image: {
     presets: {
       portrait: {
