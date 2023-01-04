@@ -7,16 +7,16 @@
 }
 
 .project-inner {
-	display: grid;
-	grid-template-rows: auto auto 1fr;
 	margin: 0.75rem;
+	padding-block-start: 5rem;
+	position: relative;
 }
 
 .project-heading {
 	color: var(--background-light);
 	font-size: 1.5rem;
 	font-variation-settings: 'wght' 300;
-	line-height: 1;
+	line-height: 1.2;
 	margin-block-end: 0.75rem;
 
 	@media (min-width: $breakpoint-mobile-large) {
@@ -69,9 +69,16 @@
 	appearance: none;
 	background: none;
 	border: none;
-	padding: 0;
+	display: flex;
 	margin: 0;
+	padding: 0;
 	text-align: left;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	block-size: 100%;
+	inline-size: 100%;
 
 	&.__link {
 		color: var(--background-light);
