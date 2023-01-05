@@ -1,12 +1,12 @@
 <template>
   <main class="page-main">
-    <video
-        class="video-background"
-        src="/video/fame.mp4"
-        autoplay
-        muted
-        loop
-    />
+<!--    <video-->
+<!--        class="video-background"-->
+<!--        src="/video/fame.mp4"-->
+<!--        autoplay-->
+<!--        muted-->
+<!--        loop-->
+<!--    />-->
 <!--    <div class="cards">-->
 <!--      <div class="card-of-fame">-->
 <!--        <img src="/images/hof-html.png"-->
