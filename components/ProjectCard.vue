@@ -2,7 +2,11 @@
   <article class="project-card">
     <div class="project-inner">
       <h2 class="project-heading">
-        <button class="button __link" type="button" @click="openModal = true">
+        <button
+            class="button __link"
+            type="button"
+            @click="openModal = true"
+        >
           {{ props.title }}
         </button>
       </h2>

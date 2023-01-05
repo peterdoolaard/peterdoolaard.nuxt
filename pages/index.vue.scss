@@ -1,7 +1,9 @@
 :any-link {
 	background: transparent;
-	text-decoration-color: var(--color-accent);
+	//text-decoration-color: var(--color-accent);
+	text-decoration-color: white;
 	text-underline-offset: 0.1em;
+
 
 	&:hover {
 		animation: linear-hover 500ms linear forwards;
@@ -10,7 +12,7 @@
 }
 
 .mask-circle {
-	background: var(--color-accent);
+	//background: var(--color-accent);
 	clip-path: circle(50%);
 	display: inline-block;
 	float: right;
