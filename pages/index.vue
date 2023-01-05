@@ -29,16 +29,12 @@
       <span class="fw-5 fs-l">erg handig</span>
       met
        <span class="fw-3 fs-3xl">
-       <NuxtLink to="/hall-of-fame">
          CSS/SCSS.
-       </NuxtLink>
          </span>
     </p>
     <p>Mijn kennis van
       <span class="fw-3 fs-2xl">
-      <NuxtLink to="/hall-of-fame">
         HTML
-      </NuxtLink>
         </span>
       is
       <span class="fw-6 fs-l">uitstekend.</span>
@@ -53,8 +49,6 @@
       <span class="fs-l">Angular</span>
       en
       <span class="fs-xl">Vue.</span>
-      Deze site <span class="fs-l pointing">👆🏻</span> heb ik gebouwd met
-      <span class="fw-3 fs-xl">Nuxt.</span>
     </p>
     <p>Elke dag
       <span class="fw-3 fs-3xl">leer</span>
