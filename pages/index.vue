@@ -65,7 +65,13 @@
 </template>
 
 <script setup lang="ts">
+import { inject } from 'vue';
 
+const pageOuter:any = inject('key')
+
+onMounted(() => {
+  pageOuter.value.classList.remove('hidden')
+})
 </script>
 
 <style src="./index.vue.scss" lang="scss" scoped></style>
