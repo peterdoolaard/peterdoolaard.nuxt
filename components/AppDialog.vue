@@ -31,6 +31,7 @@
 </template>
 
 <script setup lang="ts">
+
 const props = defineProps<{
   id: number,
   title: string,
@@ -42,10 +43,23 @@ const props = defineProps<{
 const emits = defineEmits([
   'close',
 ])
+
+onMounted(() => {
+  document.body.classList.add('stop-scroll');
+})
+
+onUnmounted(() => {
+  document.body.classList.remove('stop-scroll');
+})
+
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+
+
+
 .app-dialog-container {
+  overscroll-behavior: none;
   position: relative;
   z-index: 1;
 }
