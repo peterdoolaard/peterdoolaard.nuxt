@@ -2,7 +2,7 @@
   <Teleport to="body">
     <div class="app-dialog-container">
       <div aria-hidden="true" class="app-dialog-background" @click="emits('close')">
-        <div class="app-dialog" role="dialog">
+        <div class="app-dialog" role="dialog" ref="trapRef">
           <div class="app-dialog__background-close" @click="emits('close')" />
           <div class="app-dialog__modal">
             <header class="app-dialog__modal__header">
@@ -31,6 +31,7 @@
 </template>
 
 <script setup lang="ts">
+import useFocusTrap from "~/composables/useFocusTrap";
 
 const props = defineProps<{
   id: number,
@@ -43,6 +44,8 @@ const props = defineProps<{
 const emits = defineEmits([
   'close',
 ])
+
+const { trapRef } = useFocusTrap()
 
 onMounted(() => {
   document.body.classList.add('stop-scroll');
