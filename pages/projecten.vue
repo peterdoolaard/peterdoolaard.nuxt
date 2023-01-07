@@ -17,7 +17,14 @@
 </template>
 
 <script setup lang="ts">
+import { inject } from 'vue';
 import projects from '~/data/projects'
+
+const pageOuter:any = inject('key')
+
+onMounted(() => {
+  pageOuter.value.classList.remove('hidden')
+})
 
 </script>
 
