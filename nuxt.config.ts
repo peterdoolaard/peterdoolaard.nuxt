@@ -19,7 +19,7 @@ export default defineNuxtConfig({
 		}
 	},
 	css: [
-		// '@/assets/css/main.scss',
+		'@/assets/css/main.scss',
 	],
 	app: {
 		head: {
@@ -31,10 +31,13 @@ export default defineNuxtConfig({
 				{name: 'viewport', content: 'width=device-width, initial-scale=1'},
 				{charset: 'utf-8'},
 				{
-					name: 'description', content: 'Front-end developer sterk in HTML, CSS, responsive, SEO, accessibility en' +
-						' JavaScript'
+					name: 'description', content: 'Peter Doolaard is freelance front-end developer en auteur van boeken over' +
+						' webdevelopment.'
 				},
 			],
+			link: [
+				{ rel: 'me', href: 'https://mastodon.social/@peterdoolaard' }
+			]
 		}
 	},
 	image: {

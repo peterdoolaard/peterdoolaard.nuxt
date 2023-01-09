@@ -14,5 +14,3 @@ let pageOuter: any = ref()
 provide('key', pageOuter)
 
 </script>
-
-<style src="~/assets/css/main.scss" lang="scss"></style>
