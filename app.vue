@@ -1,16 +1,14 @@
 <template>
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
-
+  <div>
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
+  </div>
 </template>
 
 <script setup lang="ts">
-import "@fontsource/montserrat/400.css"
-import "@fontsource/montserrat/variable.css"
-import { ref, provide } from 'vue'
-
-let pageOuter: any = ref()
-provide('key', pageOuter)
-
+import "@fontsource/source-code-pro/400.css"
+import "@fontsource/source-code-pro/variable.css"
+import "@fontsource/open-sans/400.css"
+import "@fontsource/open-sans/variable-full.css"
 </script>
