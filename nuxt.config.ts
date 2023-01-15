@@ -4,15 +4,22 @@ export default defineNuxtConfig({
 		'@nuxt/image-edge',
 		'@nuxt/content',
 	],
+	content: {
+		documentDriven: false,
+		highlight: {
+			theme: 'solarized-light'
+		}
+	},
 	vite: {
 		css: {
 			preprocessorOptions: {
 				scss: {
 					additionalData: `
-            @use "@/assets/css/_breakpoints.scss" as *;
+            @use "@/assets/css/_normalize.scss" as *;
             @use "@/assets/css/_reset.scss" as *;
-            @use "@/assets/css/_utils.scss" as *;
             @use "@/assets/css/_variables.scss" as *;
+            @use "@/assets/css/_breakpoints.scss" as *;
+            @use "@/assets/css/_utils.scss" as *;
           `,
 				}
 			}
