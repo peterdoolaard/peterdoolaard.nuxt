@@ -1,173 +1,78 @@
-:any-link {
-	background: transparent;
-	//text-decoration-color: var(--color-accent);
-	text-decoration-color: white;
-	text-underline-offset: 0.1em;
+.article {
+	display: flex;
+	flex-flow: column;
+	gap: 2rem;
 
+	@media (min-width: $breakpoint-mobile-landscape) {
+		flex-flow: row;
 
-	&:hover {
-		animation: linear-hover 500ms linear forwards;
-		text-decoration-color: transparent;
+		.article-image {
+			align-self: flex-start;
+			flex: 1 1 40%;
+		}
+
+		.article-text {
+			flex: 1 1 60%;
+		}
+
+		img {
+			transform: rotateY(180deg);
+		}
 	}
 }
 
-.mask-circle {
-	//background: var(--color-accent);
-	clip-path: circle(50%);
-	display: inline-block;
-	float: right;
-	object-position: center 20%;
-	block-size: 10rem;
-	inline-size: 10rem;
+.article-text {
+	font-family: "Source Code Pro", monospace;
+	font-size: 1.2rem;
+	line-height: 1.3;
 
-	@media (min-width: $breakpoint-desktop) {
-		block-size: 16rem;
-		inline-size: 16rem;
+	span {
+		color: var(--background-light);
+	}
+}
+
+.article-image {
+	display: grid;
+	margin: 0;
+
+	.article-image__caption {
+		align-self: end;
+		grid-area: 1 / 1;
+		padding-block-end: 0.5rem;
+		padding-inline-end: 0.5rem;
+		text-align: end;
+		z-index: 1;
+
+	}
+
+	.photo-credit {
+		background-color: hsl(60deg 5% 5%);
+		color: hsl(64deg 23% 58%);
+		font-size: 12px;
+		inline-size: max-content;
+		padding: 0 0.25rem 0 0.25rem;
+		text-align: right;
+		text-decoration: none;
+
+		&:hover {
+			background-color: hsl(64deg 23% 58%);
+			color: hsl(60deg 5% 5%);
+		}
 	}
 
 	img {
-		aspect-ratio: 1/1;
-		block-size: 100%;
+		block-size: 20rem;
+		grid-area: 1 / 1;
+		inline-size: 100%;
 		object-fit: cover;
-		object-position: center 10%;
+		object-position: center 20%;
+
+		@media (min-width: $breakpoint-mobile-landscape) {
+			//inline-size: 40vw;
+		}
 	}
 }
 
-button {
-	align-items: center;
-	appearance: none;
-	background: transparent;
-	border: none;
-	color: gold;
-	cursor: pointer;
-	display: inline-flex;
-	padding: 0;
-
-	& svg {
-		block-size: 1em;
-		inline-size: auto;
-	}
+.article-text {
+	max-inline-size: 65ch;
 }
-
-.pointing {
-	cursor: pointer;
-	display: inline-block;
-
-	&:hover {
-		animation: rotate-hand 750ms linear;
-	}
-}
-
-@keyframes rotate-hand {
-	0% {
-		transform: rotate(0);
-	}
-	10% {
-		transform: rotate(-90deg);
-	}
-	20% {
-		transform: rotate(-135deg);
-	}
-	30% {
-		transform: rotate(-180deg);
-	}
-	40% {
-		transform: rotate(-90deg);
-	}
-	50% {
-		transform: rotate(0);
-	}
-	60% {
-		transform: rotate(45deg);
-	}
-	70% {
-		transform: rotate(60deg);
-	}
-	80% {
-		transform: rotate(30deg);
-	}
-	90% {
-		transform: rotate(-20deg);
-	}
-	100% {
-		transform: rotate(0);
-	}
-}
-
-@keyframes linear-hover {
-	0% {
-		background: linear-gradient(to right,
-			var(--background-light), var(--background-light) 10%,
-			transparent 10%, transparent
-		);
-		color: white;
-	}
-	10% {
-		background: linear-gradient(to right,
-			//transparent, transparent 10%,
-			var(--background-light), var(--background-light) 20%,
-			transparent 20%, transparent
-		);
-	}
-	20% {
-		background: linear-gradient(to right,
-			//transparent, transparent 20%,
-			var(--background-light), var(--background-light) 30%,
-			transparent 30%, transparent
-		);
-	}
-	30% {
-		background: linear-gradient(to right,
-			//transparent, transparent 30%,
-			var(--background-light), var(--background-light) 40%,
-			transparent 40%, transparent
-		);
-	}
-	40% {
-		background: linear-gradient(to right,
-			//transparent, transparent 40%,
-			var(--background-light), var(--background-light) 50%,
-			transparent 50%, transparent
-		);
-	}
-	50% {
-		background: linear-gradient(to right,
-			//transparent, transparent 50%,
-			var(--background-light), var(--background-light) 60%,
-			transparent 60%, transparent
-		);
-		color: black;
-	}
-	60% {
-		background: linear-gradient(to right,
-			//transparent, transparent 60%,
-			var(--background-light), var(--background-light) 70%,
-			transparent 70%, transparent
-		);
-	}
-	70% {
-		background: linear-gradient(to right,
-			//transparent, transparent 70%,
-			var(--background-light), var(--background-light) 80%,
-			transparent 80%, transparent
-		);
-	}
-	80% {
-		background: linear-gradient(to right,
-			//transparent, transparent 80%,
-			var(--background-light), var(--background-light) 90%,
-			transparent 90%, transparent
-		);
-	}
-	90% {
-		background: linear-gradient(to right,
-			//transparent, transparent 90%,
-			var(--background-light), var(--background-light) 100% //transparent 100%, transparent
-		);
-	}
-	100% {
-		background: var(--background-light);
-		color: black;
-	}
-}
-

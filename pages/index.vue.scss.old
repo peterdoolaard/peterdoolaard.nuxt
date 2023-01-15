@@ -1,0 +1,173 @@
+:any-link {
+	background: transparent;
+	//text-decoration-color: var(--color-accent);
+	text-decoration-color: white;
+	text-underline-offset: 0.1em;
+
+
+	&:hover {
+		animation: linear-hover 500ms linear forwards;
+		text-decoration-color: transparent;
+	}
+}
+
+.mask-circle {
+	//background: var(--color-accent);
+	clip-path: circle(50%);
+	display: inline-block;
+	float: right;
+	object-position: center 20%;
+	block-size: 10rem;
+	inline-size: 10rem;
+
+	@media (min-width: $breakpoint-desktop) {
+		block-size: 16rem;
+		inline-size: 16rem;
+	}
+
+	img {
+		aspect-ratio: 1/1;
+		block-size: 100%;
+		object-fit: cover;
+		object-position: center 10%;
+	}
+}
+
+button {
+	align-items: center;
+	appearance: none;
+	background: transparent;
+	border: none;
+	color: gold;
+	cursor: pointer;
+	display: inline-flex;
+	padding: 0;
+
+	& svg {
+		block-size: 1em;
+		inline-size: auto;
+	}
+}
+
+.pointing {
+	cursor: pointer;
+	display: inline-block;
+
+	&:hover {
+		animation: rotate-hand 750ms linear;
+	}
+}
+
+@keyframes rotate-hand {
+	0% {
+		transform: rotate(0);
+	}
+	10% {
+		transform: rotate(-90deg);
+	}
+	20% {
+		transform: rotate(-135deg);
+	}
+	30% {
+		transform: rotate(-180deg);
+	}
+	40% {
+		transform: rotate(-90deg);
+	}
+	50% {
+		transform: rotate(0);
+	}
+	60% {
+		transform: rotate(45deg);
+	}
+	70% {
+		transform: rotate(60deg);
+	}
+	80% {
+		transform: rotate(30deg);
+	}
+	90% {
+		transform: rotate(-20deg);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+
+@keyframes linear-hover {
+	0% {
+		background: linear-gradient(to right,
+			var(--background-light), var(--background-light) 10%,
+			transparent 10%, transparent
+		);
+		color: white;
+	}
+	10% {
+		background: linear-gradient(to right,
+			//transparent, transparent 10%,
+			var(--background-light), var(--background-light) 20%,
+			transparent 20%, transparent
+		);
+	}
+	20% {
+		background: linear-gradient(to right,
+			//transparent, transparent 20%,
+			var(--background-light), var(--background-light) 30%,
+			transparent 30%, transparent
+		);
+	}
+	30% {
+		background: linear-gradient(to right,
+			//transparent, transparent 30%,
+			var(--background-light), var(--background-light) 40%,
+			transparent 40%, transparent
+		);
+	}
+	40% {
+		background: linear-gradient(to right,
+			//transparent, transparent 40%,
+			var(--background-light), var(--background-light) 50%,
+			transparent 50%, transparent
+		);
+	}
+	50% {
+		background: linear-gradient(to right,
+			//transparent, transparent 50%,
+			var(--background-light), var(--background-light) 60%,
+			transparent 60%, transparent
+		);
+		color: black;
+	}
+	60% {
+		background: linear-gradient(to right,
+			//transparent, transparent 60%,
+			var(--background-light), var(--background-light) 70%,
+			transparent 70%, transparent
+		);
+	}
+	70% {
+		background: linear-gradient(to right,
+			//transparent, transparent 70%,
+			var(--background-light), var(--background-light) 80%,
+			transparent 80%, transparent
+		);
+	}
+	80% {
+		background: linear-gradient(to right,
+			//transparent, transparent 80%,
+			var(--background-light), var(--background-light) 90%,
+			transparent 90%, transparent
+		);
+	}
+	90% {
+		background: linear-gradient(to right,
+			//transparent, transparent 90%,
+			var(--background-light), var(--background-light) 100% //transparent 100%, transparent
+		);
+	}
+	100% {
+		background: var(--background-light);
+		color: black;
+	}
+}
+

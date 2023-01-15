@@ -1,3 +1,8 @@
+
+:root {
+	--main-max-inline: 1160px;
+}
+
 :root {
 	font-size: 1rem;
 
@@ -25,19 +30,15 @@
 }
 
 body {
-	font-family: Montserrat, sans-serif;
+	font-family: "Open Sans", sans-serif;
 	font-weight: 400;
 }
 
 @supports (font-variation-settings: normal) {
 	body {
-		font-family: MontserratVariable;
-		font-variation-settings: 'wght' 400;
+		font-family: "Open SansVariable", sans-serif;
+		font-variation-settings: 'wght' 400, 'wdth' 100;
 	}
-}
-
-.hidden {
-	display: none;
 }
 
 .page-outer {
@@ -53,9 +54,9 @@ body {
 	padding: 1rem;
 }
 
-.page-main {
+.main-content {
 	margin-inline: auto;
-	max-inline-size: $breakpoint-desktop;
+	max-inline-size: var(--main-max-inline);
 }
 
 .app-page-heading {
@@ -71,4 +72,8 @@ body {
 
 :any-link {
 	color: inherit;
+}
+
+p code {
+	color: #B58451;
 }
